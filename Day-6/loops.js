@@ -76,11 +76,20 @@ for (i = 0; i <= 100; i++) {
 
 //print prime numbers
 for (let i = 0; i <= 100; i++) {
-    for (let k = 2; k < i; k++) {
-        if (i % k === 0 && i > 1) {
-            console.log(i)
-        }
-    }
+  
+  let flag = true;
+  // looping through 2 to user input number
+  for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+          flag = false;
+          break;
+      }
+  }
+
+  // if number greater than 1 and not divisible by other numbers
+  if (i > 1 && flag == true) {
+      console.log(i);
+  }
 }
 
 //sum of all numbers
